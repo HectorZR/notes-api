@@ -25,7 +25,7 @@
     "typeorm": "typeorm-ts-node-commonjs -d ./src/data-source.ts",
     "typeorm:migrate": "npm run typeorm migration:generate -- -n",
     "typeorm:run": "npm run typeorm migration:run",
-    "production": "npm run build && node ./build/main.js"
+    "production": "node ./build/main.js"
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
