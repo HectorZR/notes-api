@@ -9,6 +9,7 @@ const ormConfigs: () => DataSourceOptions = () => ({
   host: process.env.DATABASE_HOST,
   migrations: ['./migrations/**/*{.ts,.js}'],
   entities: ['./entity/**/*.ts'],
+  ssl: true,
 });
 
 export default ormConfigs;
