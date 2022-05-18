@@ -4,6 +4,7 @@ import { AppDataSource } from './data-source';
 
 async function bootstrap() {
   await AppDataSource.initialize();
+  await AppDataSource.runMigrations();
   const app = await NestFactory.create(AppModule);
   await app.listen(process.env.PORT || 3000);
 }
