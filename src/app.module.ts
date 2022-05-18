@@ -9,7 +9,7 @@ import ormConfigs from './ormconfig';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    TypeOrmModule.forRoot({ ...ormConfigs(), autoLoadEntities: true }),
+    TypeOrmModule.forRoot({ ...ormConfigs, autoLoadEntities: true }),
     NoteModule,
   ],
   controllers: [AppController],
